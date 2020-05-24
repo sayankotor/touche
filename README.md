@@ -7,7 +7,7 @@ We have a __query__ (i.e. "What is better laptop or desktop" and some list of pa
 
 Approcahes:
 
-*3. Approach based on Transformers*
+##3. Approach based on Transformers##
 
 Use *pytorch_transformers* library.
 
@@ -24,4 +24,5 @@ As we can see in **touche-explain_transformers.ipynb**, to count closeness of qu
 The score is sum of weights in this head on non-diagonal place, excluding the weights corresponding to the special tokens ([CLS], [SEP], ...).
 
 *5.* Bert embedding + LSTM from FastAi pre-trained language model (AWD_LSTM)
+
 lstm_ulmfit.py, touche_lstm_ulmfit.ipynb
