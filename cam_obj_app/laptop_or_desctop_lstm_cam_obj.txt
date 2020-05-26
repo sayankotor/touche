@@ -1,0 +1,25 @@
+Laptop or desktop
+CAM OBJ TITLE BODY
+Cam - number of comparative questions
+obj: 1.5 2 objects found, 1.2 1 objects found
+furthure we need to find not directly objects but more sismlar embeddings (laptop - noteboks). Do not concern the name entity
+0 1.2 which thinkpad is right for you? which thinkpad laptop is right for you?
+0 1.5 smartphone sales boom -- who needs a laptop? | pcworld would today&#x27;s smartphone make a suitable replacement for your laptop or desktop? probably not.
+0 1.2 high tech times- choosing a laptop computer one word of advice: a 13.3-inch tft screen is nearly equivalent to a 16-inch desktop monitor, as there is no bezel or other wasted display space.
+0 1.2 software as a service vs. desktop virtualization solutions hometopicscloud computing and hosted servicessoftware as a service (saas) applications and consulting software as a service vs. desktop virtualization solutions software as a service (saas) or desktop virtualization: which solution is better for your customers?
+0 1.2 notebooks galore - laptops guide: choosing a laptop that is right for you , with all of the capabilities of a desktop.
+0 1.5 watch mobile in laptops - desktops, ghaziabad search results for &quot;watch mobile&quot; in &quot;laptops - desktops&quot; in ghaziabad classifieds, india shown below are the results for &quot;watch mobile&quot; in ghaziabad: all categories by clicking submit, you agree to our terms of use &amp; privacy policy i want to sell my used hp laptop which is in better condition having
+0 1.2 tech 2012: everyone wants a piece of apple or facebook . * vmware fusion 4 vs parallels desktop 7: the virtualization battle continues, 2012.01.18. over the years vmware and parallels have both improved signficantly, but which is better in 2012?
+0 1.5 nerdblog.com: a smartphone in my laptop ram still uses more than a watt per chip (smartphones have a lot less ram than a laptop), and a wifi radio uses &lt;100mw. one big culprit is the desktop-oriented chipsets, which use tons of wattage (like &gt;10w) when you&#x27;re not doing much with your pc.
+1 1.0 how important is dell&#x27;s linux desktop deal? &quot;there&#x27;s a big market out there for open source and with it comes a diversity of vendors. our focus at red hat is encouraging the growth of free and open-source software. we think it creates better software, better communities and better value.
+1 1.0 better on windows?: a &#x27;better&#x27; definition or just keychain access and the universally accessible encrypted password database it is connected to? or how about the system-wide address book? (or even entourage which is better than outlook?) what about growl and remind?
+1 1.0 dell inspiron 17r 17.3-inch desktop replacement laptop pc at $1000, there are less expensive blu-ray equipped systems or models with better graphics for gaming.
+0 1.0 back to school: netbook or laptop? by roy tanck and luke morton requires flash player 9 or better.
+0 1.2 desktop virtualization software and virtual desktop management guide small it departments say it&#x27;s better late than never for windows intune -- a cloud-based desktop management app for remote desktop access, patches, antivirus and software updates. organizations still rely on windows xp and ie6 apps because they&#x27;re a chore to upgrade.
+0 1.5 design visualization and the desktop engineer by desktop engineering you can view, say, a 25gb model of a boeing 777, with every duct, bolt, and wire. you can rotate, pan, and zoom it in real time, on your desktop pc, or your laptop, or even on your iphone.
+0 1.0 if you want to be a better blogger, write better | website in a weekend if this is you, here&#x27;s something which might help.
+0 1.5 how to configure your laptop for a remote desktop connection - for dummies how to configure your laptop for a remote desktop connection with windows vista, it’s amazingly easy to set up the remote desktop feature so that you can work between your laptop and desktop computers.
+1 1.2 a game-changing formula for global success by desktop engineering it’s much easier to move forward than backward as evidenced by how unproductive most of us instantly become the minute our e-mail or laptop computers become unavailable!
+2 1.2 how to buy a laptop for 2012 (for the regular person) | group policy a my feeling is that if you want a netbook, try to get one as close to a laptop-spec as possible. but for just a few hundred more you can have a full laptop, which, yes, is a little bigger and perhaps better, all around, for everyday tasks.
+1 1.2 your answer can make you a better writer learn how to start your own desktop marketing business today! a once complicated profession is now something you can do on a standard computer – even if you have little or no “artistic” ability.
+0 1.0 five things that would make the ipad 3 a better business tool | pcworld ok, this one is not in apple’s control, but it would go a long way toward making the ipad a clear winner as a mobile business tool. there are apps out there now such as the apple iworks apps, or documents to go which are capable of creating, viewing, or editing microsoft office files.
