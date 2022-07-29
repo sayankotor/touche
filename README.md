@@ -1,5 +1,8 @@
 This repository contains some approches to information retrieval task.
 
+
+**Year 2020**
+
 To run some \*.py modules on restarted machine, we need first to start bert service which in tern needs restored graph in tensorflow.
 Graph restoring and service starting are reproduced in the bash script before the main module starts.
 
