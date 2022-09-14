@@ -2,6 +2,8 @@
 
 The main track of this stage is employing the ColBERT model to rank passages.
 
+All chekpoints are avalable at https://zenodo.org/record/7078839#.YyG3VmRBxhE
+
 Employing Colbert consists of 4 stage:
 
 Train
