@@ -1,39 +1,59 @@
+
 # Touche 2022
+
+## Data your need
+
+1) Chekpoints of ColBERT model.
+All mentioned chekpoints are available at https://zenodo.org/record/7078839#.YyG3VmRBxhE
+
+2) Collection of Touche passages in proper format.
+In Touche/collections folder, touche21_psgs.tsv file
+
+3) Collection of Touche queries in proper format
+Touche/collections folder, queries_22.tsv
 
 The main track of this stage is employing the ColBERT model to rank passages.
 
-All chekpoints are avalable at https://zenodo.org/record/7078839#.YyG3VmRBxhE
+## Train
 
 Employing Colbert consists of 4 stage:
 
-Train
 - Create regular index
 - Create faiss index
 - Retrieve
 
-The first 3 steps take a significant time, so we archive the folder with checkpoints and pre-counted indexes and place it here. We also represent provided queries and documents collections in the “Queries” folder in the current repository and “ColBERT/collections” folder in archived.
-To reproduce results, you should download and unarchive the folder and do the following command:
+**Before Retrieving**
+
+You may have acsess to:
+1) ColBert models checkpoints in ZENODO
+2) Full ColBERT pipeline for TOUCHE
+
+If you have only ColBERT model checkpoints (without archieve version of full ColBERT pipeline), as downloaded from ZENODO, you firstly should create **index** and **index faiss**.
+
+CUDA_VISIBLE_DEVICES="2,3,4,5" python3 -m colbert.index --amp --doc_maxlen 180 --mask-punctuation --bsize 256 --checkpoint /notebook/ColBERT/regular_checkpoints/folder_with_main_chekpoints/**edinburg_colbert.dnn** --collection /notebook/ColBERT/collections/**touche21_psgs.tsv** --index_root /notebook/ColBERT/indexes/ --index_name full_bert_mscmarco --root /notebook/ColBERT/experiments/ --experiment full_bert_msmarco
+ 
+These steps take a significant time, so we archive the folder with checkpoints and pre-counted indexes. We also represent provided queries and documents collections in the “collections” folder in the current repository and “ColBERT/collections” folder in archived pipeline.
+If you have archieved pipeline, you can reproduce result by the following command:
 
 **Model, fine-tuned on the previous Touche data:**
 
 Retrieve:
 
-CUDA_VISIBLE_DEVICES="4, 5" python3 -m colbert.retrieve --amp --doc_maxlen 180 --mask-punctuation --bsize 256 --nprobe 32 --partitions 32768 --faiss_depth 1024 --queries /../Touche22/queries_22.tsv --checkpoint /../ColBERT/experiments/MSMARCO-fn/train.py/msmarco.ft.l2/checkpoints/colbert.dnn --index_root /../ColBERT/indexes/MSMARCO.L2.32x200k_22 --index_name ​​pretrain_21 --partitions 32768 --root /../ColBERT/experiments/ --experiment MSMARCO-fn
+CUDA_VISIBLE_DEVICES="4, 5" python3 -m colbert.retrieve --amp --doc_maxlen 180 --mask-punctuation --bsize 256 --nprobe 32 --partitions 32768 --faiss_depth 1024 --queries /../Touche22/queries_22.tsv --checkpoint /../ColBERT/experiments/MSMARCO-fn/train.py/msmarco.ft.l2/checkpoints/filetune_colbert_232.dnn --index_root /../ColBERT/indexes/MSMARCO.L2.32x200k_22 --index_name ​​pretrain_21 --partitions 32768 --root /../ColBERT/experiments/ --experiment MSMARCO-fn
 
 **Model, pre-trained on MSMarco dataset:**
 
 Retrieve:
 
-CUDA_VISIBLE_DEVICES="4, 5" python3 -m colbert.retrieve --amp --doc_maxlen 180 --mask-punctuation --bsize 256 --nprobe 32 --partitions 32768 --faiss_depth 1024 --queries /../Touche22/queries_22.tsv --checkpoint /../ColBERT/experiments/MSMARCO-psg_new/train.py/msmarco.psg.l2/checkpoints/colbert.dnn --index_root /../ColBERT/indexes/ --index_name MSMARCO.L2.32x200k_22 --partitions 32768 --root /../ColBERT/experiments/ --experiment MSMARCO-psg
+CUDA_VISIBLE_DEVICES="4, 5" python3 -m colbert.retrieve --amp --doc_maxlen 180 --mask-punctuation --bsize 256 --nprobe 32 --partitions 32768 --faiss_depth 1024 --queries /../Touche22/queries_22.tsv --checkpoint /../ColBERT/experiments/MSMARCO-psg_new/train.py/msmarco.psg.l2/checkpoints/colbert_trained_by_us_300000.dnn --index_root /../ColBERT/indexes/ --index_name MSMARCO.L2.32x200k_22 --partitions 32768 --root /../ColBERT/experiments/ --experiment MSMARCO-psg
 
 **Model, based on checkpoint from Glasgow University:**
 
 Retrieve:
 
-CUDA_VISIBLE_DEVICES="4, 5" python3 -m colbert.retrieve --amp --doc_maxlen 180 --mask-punctuation --bsize 256 --nprobe 32 --partitions 32768 --faiss_depth 1024 --queries /../Touche22/queries_22.tsv --checkpoint /../ColBERT/experiments/MSMARCO-psg/train.py/msmarco.psg.l2/checkpoints/colbert.dnn --index_root /../ColBERT/indexes/ --index_name MSMARCO.L2.32x200k_22_old --partitions 32768 --root /../ColBERT/experiments/ --experiment MSMARCO-psg
+CUDA_VISIBLE_DEVICES="4, 5" python3 -m colbert.retrieve --amp --doc_maxlen 180 --mask-punctuation --bsize 256 --nprobe 32 --partitions 32768 --faiss_depth 1024 --queries /../Touche22/queries_22.tsv --checkpoint /../ColBERT/experiments/MSMARCO-psg/train.py/msmarco.psg.l2/checkpoints/edinburg_colbert.dnn --index_root /../ColBERT/indexes/ --index_name MSMARCO.L2.32x200k_22_old --partitions 32768 --root /../ColBERT/experiments/ --experiment MSMARCO-psg
 
-The post-processing of obtai result are in Test folder
- 
+The post-processing of obtained result are in Test folder.
 
 # Touche 2020
 Code for reproducing of our submission to the CLEF-2020 shared task on argument retrieval.
